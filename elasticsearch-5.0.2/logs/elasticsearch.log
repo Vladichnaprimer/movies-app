@@ -1,0 +1,155 @@
+[2016-12-01T12:26:18,358][INFO ][o.e.n.Node               ] [] initializing ...
+[2016-12-01T12:26:19,932][INFO ][o.e.e.NodeEnvironment    ] [OF31Mjb] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [623.6gb], net total_space [683.7gb], spins? [possibly], types [ext4]
+[2016-12-01T12:26:19,933][INFO ][o.e.e.NodeEnvironment    ] [OF31Mjb] heap size [1.9gb], compressed ordinary object pointers [true]
+[2016-12-01T12:26:19,936][INFO ][o.e.n.Node               ] [OF31Mjb] node name [OF31Mjb] derived from node ID; set [node.name] to override
+[2016-12-01T12:26:20,764][INFO ][o.e.n.Node               ] [OF31Mjb] version[5.0.2], pid[10276], build[f6b4951/2016-11-24T10:07:18.101Z], OS[Linux/4.4.0-47-generic/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_111/25.111-b14]
+[2016-12-01T12:26:45,403][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [aggs-matrix-stats]
+[2016-12-01T12:26:45,403][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [ingest-common]
+[2016-12-01T12:26:45,404][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [lang-expression]
+[2016-12-01T12:26:45,404][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [lang-groovy]
+[2016-12-01T12:26:45,404][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [lang-mustache]
+[2016-12-01T12:26:45,405][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [lang-painless]
+[2016-12-01T12:26:45,405][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [percolator]
+[2016-12-01T12:26:45,405][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [reindex]
+[2016-12-01T12:26:45,406][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [transport-netty3]
+[2016-12-01T12:26:45,406][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [transport-netty4]
+[2016-12-01T12:26:45,407][INFO ][o.e.p.PluginsService     ] [OF31Mjb] no plugins loaded
+[2016-12-01T12:27:07,913][INFO ][o.e.n.Node               ] [OF31Mjb] initialized
+[2016-12-01T12:27:07,913][INFO ][o.e.n.Node               ] [OF31Mjb] starting ...
+[2016-12-01T12:27:08,796][INFO ][o.e.t.TransportService   ] [OF31Mjb] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2016-12-01T12:27:11,927][INFO ][o.e.c.s.ClusterService   ] [OF31Mjb] new_master {OF31Mjb}{OF31MjbySJW5n8m7Dr7Qsg}{FiM15vxDTNiD_vgk5f3RHA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2016-12-01T12:27:12,344][INFO ][o.e.g.GatewayService     ] [OF31Mjb] recovered [0] indices into cluster_state
+[2016-12-01T12:27:12,385][INFO ][o.e.h.HttpServer         ] [OF31Mjb] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2016-12-01T12:27:12,385][INFO ][o.e.n.Node               ] [OF31Mjb] started
+[2016-12-01T12:32:11,919][INFO ][o.e.c.m.MetaDataCreateIndexService] [OF31Mjb] [movies_development_20161201123210727] creating index, cause [api], templates [], shards [5]/[1], mappings [_default_]
+[2016-12-01T12:32:19,309][INFO ][o.e.c.m.MetaDataMappingService] [OF31Mjb] [movies_development_20161201123210727/zNix9nEBRqO-QtGMvoxbuQ] create_mapping [movie]
+[2016-12-01T12:35:37,390][INFO ][o.e.n.Node               ] [OF31Mjb] stopping ...
+[2016-12-01T12:36:11,253][DEBUG][o.e.a.a.c.n.s.TransportNodesStatsAction] [OF31Mjb] failed to execute on node [OF31MjbySJW5n8m7Dr7Qsg]
+org.elasticsearch.transport.SendRequestTransportException: [OF31Mjb][127.0.0.1:9300][cluster:monitor/nodes/stats[n]]
+	at org.elasticsearch.transport.TransportService.sendRequestInternal(TransportService.java:504) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:459) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.start(TransportNodesAction.java:205) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:89) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:52) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction$RequestFilterChain.proceed(TransportAction.java:182) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.ingest.IngestActionFilter.apply(IngestActionFilter.java:82) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction$RequestFilterChain.proceed(TransportAction.java:180) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:153) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:87) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.updateNodeStats(InternalClusterInfoService.java:263) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.refresh(InternalClusterInfoService.java:299) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.maybeRefresh(InternalClusterInfoService.java:284) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.access$500(InternalClusterInfoService.java:69) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService$SubmitReschedulingClusterInfoUpdatedJob.lambda$run$0(InternalClusterInfoService.java:230) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:458) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_111]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_111]
+Caused by: org.elasticsearch.transport.TransportException: TransportService is closed stopped can't send request
+	at org.elasticsearch.transport.TransportService.sendRequestInternal(TransportService.java:484) ~[elasticsearch-5.0.2.jar:5.0.2]
+	... 18 more
+[2016-12-01T12:36:11,253][DEBUG][o.e.a.a.i.s.TransportIndicesStatsAction] [OF31Mjb] failed to execute [indices:monitor/stats] on node [OF31MjbySJW5n8m7Dr7Qsg]
+org.elasticsearch.transport.SendRequestTransportException: [OF31Mjb][127.0.0.1:9300][indices:monitor/stats[n]]
+	at org.elasticsearch.transport.TransportService.sendRequestInternal(TransportService.java:504) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:459) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:452) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction$AsyncAction.sendNodeRequest(TransportBroadcastByNodeAction.java:323) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction$AsyncAction.start(TransportBroadcastByNodeAction.java:311) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction.doExecute(TransportBroadcastByNodeAction.java:234) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.broadcast.node.TransportBroadcastByNodeAction.doExecute(TransportBroadcastByNodeAction.java:79) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction$RequestFilterChain.proceed(TransportAction.java:182) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.ingest.IngestActionFilter.apply(IngestActionFilter.java:82) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction$RequestFilterChain.proceed(TransportAction.java:180) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:153) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:87) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.updateIndicesStats(InternalClusterInfoService.java:277) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.refresh(InternalClusterInfoService.java:328) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.maybeRefresh(InternalClusterInfoService.java:284) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.access$500(InternalClusterInfoService.java:69) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService$SubmitReschedulingClusterInfoUpdatedJob.lambda$run$0(InternalClusterInfoService.java:230) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:458) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_111]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_111]
+Caused by: org.elasticsearch.transport.TransportException: TransportService is closed stopped can't send request
+	at org.elasticsearch.transport.TransportService.sendRequestInternal(TransportService.java:484) ~[elasticsearch-5.0.2.jar:5.0.2]
+	... 20 more
+[2016-12-01T12:36:12,095][WARN ][o.e.a.a.c.n.s.TransportNodesStatsAction] [OF31Mjb] not accumulating exceptions, excluding exception from response
+org.elasticsearch.action.FailedNodeException: Failed node [OF31MjbySJW5n8m7Dr7Qsg]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.onFailure(TransportNodesAction.java:247) [elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.access$300(TransportNodesAction.java:160) [elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction$1.handleException(TransportNodesAction.java:219) [elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.transport.TransportService$ContextRestoreResponseHandler.handleException(TransportService.java:957) [elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.transport.TransportService$5.doRun(TransportService.java:525) [elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingAbstractRunnable.doRun(ThreadContext.java:527) [elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.common.util.concurrent.AbstractRunnable.run(AbstractRunnable.java:37) [elasticsearch-5.0.2.jar:5.0.2]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [?:1.8.0_111]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [?:1.8.0_111]
+	at java.lang.Thread.run(Thread.java:745) [?:1.8.0_111]
+Caused by: org.elasticsearch.transport.SendRequestTransportException: [OF31Mjb][127.0.0.1:9300][cluster:monitor/nodes/stats[n]]
+	at org.elasticsearch.transport.TransportService.sendRequestInternal(TransportService.java:504) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:459) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.start(TransportNodesAction.java:205) [elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:89) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:52) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction$RequestFilterChain.proceed(TransportAction.java:182) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.ingest.IngestActionFilter.apply(IngestActionFilter.java:82) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction$RequestFilterChain.proceed(TransportAction.java:180) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:153) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:87) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.updateNodeStats(InternalClusterInfoService.java:263) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.refresh(InternalClusterInfoService.java:299) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.maybeRefresh(InternalClusterInfoService.java:284) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.access$500(InternalClusterInfoService.java:69) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService$SubmitReschedulingClusterInfoUpdatedJob.lambda$run$0(InternalClusterInfoService.java:230) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:458) ~[elasticsearch-5.0.2.jar:5.0.2]
+	... 3 more
+Caused by: org.elasticsearch.transport.TransportException: TransportService is closed stopped can't send request
+	at org.elasticsearch.transport.TransportService.sendRequestInternal(TransportService.java:484) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.transport.TransportService.sendRequest(TransportService.java:459) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction$AsyncAction.start(TransportNodesAction.java:205) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:89) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.nodes.TransportNodesAction.doExecute(TransportNodesAction.java:52) [elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction$RequestFilterChain.proceed(TransportAction.java:182) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.ingest.IngestActionFilter.apply(IngestActionFilter.java:82) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction$RequestFilterChain.proceed(TransportAction.java:180) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:153) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.action.support.TransportAction.execute(TransportAction.java:87) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.updateNodeStats(InternalClusterInfoService.java:263) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.refresh(InternalClusterInfoService.java:299) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.maybeRefresh(InternalClusterInfoService.java:284) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService.access$500(InternalClusterInfoService.java:69) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.cluster.InternalClusterInfoService$SubmitReschedulingClusterInfoUpdatedJob.lambda$run$0(InternalClusterInfoService.java:230) ~[elasticsearch-5.0.2.jar:5.0.2]
+	at org.elasticsearch.common.util.concurrent.ThreadContext$ContextPreservingRunnable.run(ThreadContext.java:458) ~[elasticsearch-5.0.2.jar:5.0.2]
+	... 3 more
+[2016-12-01T12:36:16,765][INFO ][o.e.n.Node               ] [OF31Mjb] stopped
+[2016-12-01T12:36:16,766][INFO ][o.e.n.Node               ] [OF31Mjb] closing ...
+[2016-12-01T12:36:17,137][INFO ][o.e.n.Node               ] [OF31Mjb] closed
+[2016-12-01T12:43:05,558][INFO ][o.e.n.Node               ] [] initializing ...
+[2016-12-01T12:43:08,434][INFO ][o.e.e.NodeEnvironment    ] [OF31Mjb] using [1] data paths, mounts [[/ (/dev/sda1)]], net usable_space [623.5gb], net total_space [683.7gb], spins? [possibly], types [ext4]
+[2016-12-01T12:43:08,435][INFO ][o.e.e.NodeEnvironment    ] [OF31Mjb] heap size [1.9gb], compressed ordinary object pointers [true]
+[2016-12-01T12:43:09,171][INFO ][o.e.n.Node               ] [OF31Mjb] node name [OF31Mjb] derived from node ID; set [node.name] to override
+[2016-12-01T12:43:09,637][INFO ][o.e.n.Node               ] [OF31Mjb] version[5.0.2], pid[11177], build[f6b4951/2016-11-24T10:07:18.101Z], OS[Linux/4.4.0-47-generic/amd64], JVM[Oracle Corporation/Java HotSpot(TM) 64-Bit Server VM/1.8.0_111/25.111-b14]
+[2016-12-01T12:43:24,554][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [aggs-matrix-stats]
+[2016-12-01T12:43:24,554][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [ingest-common]
+[2016-12-01T12:43:24,554][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [lang-expression]
+[2016-12-01T12:43:24,554][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [lang-groovy]
+[2016-12-01T12:43:24,554][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [lang-mustache]
+[2016-12-01T12:43:24,554][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [lang-painless]
+[2016-12-01T12:43:24,554][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [percolator]
+[2016-12-01T12:43:24,554][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [reindex]
+[2016-12-01T12:43:24,555][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [transport-netty3]
+[2016-12-01T12:43:24,555][INFO ][o.e.p.PluginsService     ] [OF31Mjb] loaded module [transport-netty4]
+[2016-12-01T12:43:24,555][INFO ][o.e.p.PluginsService     ] [OF31Mjb] no plugins loaded
+[2016-12-01T12:44:11,652][INFO ][o.e.n.Node               ] [OF31Mjb] initialized
+[2016-12-01T12:44:11,652][INFO ][o.e.n.Node               ] [OF31Mjb] starting ...
+[2016-12-01T12:44:15,325][INFO ][o.e.t.TransportService   ] [OF31Mjb] publish_address {127.0.0.1:9300}, bound_addresses {[::1]:9300}, {127.0.0.1:9300}
+[2016-12-01T12:44:18,549][INFO ][o.e.c.s.ClusterService   ] [OF31Mjb] new_master {OF31Mjb}{OF31MjbySJW5n8m7Dr7Qsg}{200Ihoy5Q-SCbj1QLfJjlA}{127.0.0.1}{127.0.0.1:9300}, reason: zen-disco-elected-as-master ([0] nodes joined)
+[2016-12-01T12:44:18,990][INFO ][o.e.h.HttpServer         ] [OF31Mjb] publish_address {127.0.0.1:9200}, bound_addresses {[::1]:9200}, {127.0.0.1:9200}
+[2016-12-01T12:44:18,990][INFO ][o.e.n.Node               ] [OF31Mjb] started
+[2016-12-01T12:44:20,480][INFO ][o.e.g.GatewayService     ] [OF31Mjb] recovered [1] indices into cluster_state
+[2016-12-01T12:44:25,144][INFO ][o.e.c.r.a.AllocationService] [OF31Mjb] Cluster health status changed from [RED] to [YELLOW] (reason: [shards started [[movies_development_20161201123210727][0]] ...]).
+[2016-12-01T12:47:20,879][INFO ][o.e.n.Node               ] [OF31Mjb] stopping ...
+[2016-12-01T12:47:21,826][INFO ][o.e.n.Node               ] [OF31Mjb] stopped
+[2016-12-01T12:47:21,826][INFO ][o.e.n.Node               ] [OF31Mjb] closing ...
+[2016-12-01T12:47:22,192][INFO ][o.e.n.Node               ] [OF31Mjb] closed
